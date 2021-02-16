@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>TravelBuddy - Message</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/message.css"/>
+    <link rel="stylesheet" href="assets/style/login.css"/>
+    <link rel="stylesheet" href="assets/style/default.css"/>
+    <script src="https://cdn.fys.cloud/fyscloud/0.0.2/fyscloud.bundle.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/message.js"></script>
+
+</head>
+<body>
+<main>
+    <div class="emailtitel">
+        <h1>E-mail</h1>
+    </div>
+    <form>
+        <div class="email">
+            <select class="bar-input" id="email" name="email" required>
+                <option value="" disabled selected>Selecteer uw buddy...</option>
+            </select>
+            <input class="bar-input" id="onderwerp" type="text" name="email" placeholder="Onderwerp..." align="center"
+                   required>
+            <textarea class="content" id="tekst" placeholder="Schrijf hier uw email..." type="text" required></textarea>
+        </div>
+        <div class="send">
+            <p>
+                <button class="send-button" type="submit" value="submit" onclick="onSubmit()">Verstuur</button>
+            </p>
+        </div>
+    </form>
+</main>
+</body>
+</html>

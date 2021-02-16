@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+    <title>TravelBuddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/index.css"/>
+    <link rel="stylesheet" href="assets/style/login.css"/>
+    <link rel="stylesheet" href="assets/style/default.css"/>
+    <script src="https://cdn.fys.cloud/fyscloud/0.0.2/fyscloud.bundle.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/buddysearch.js"></script>
+</head>
+<body>
+<main>
+    <div class="banner">
+        <ul>
+            <li>
+                <p>Kies een bestemming</p>
+                <select id="bestemming">
+                    <option value="Bali">Bali</option>
+                    <option value="Brazilie">Brazilie</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Griekeland">Griekenland</option>
+                    <option value="italy">Italy</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Spanje">Spanje</option>
+                    <option value="Turkije">Turkije</option>
+                </select>
+            </li>
+            <li>
+                <p>Kies een vertrekdatum</p>
+                <select id="vertek">
+                    <option value="januari">januari </option>
+                    <option value="februari">februari </option>
+                    <option value="maart">maart </option>
+                    <option value="april">april </option>
+                    <option value="mei">mei </option>
+                    <option value="juni">juni </option>
+                    <option value="juli">juli </option>
+                    <option value="augustus">augustus </option>
+                    <option value="september">september </option>
+                    <option value="oktober">oktober </option>
+                    <option value="november">november </option>
+                    <option value="december">december </option>
+                </select>
+            </li>
+            <li class="homepageButton">
+                <button class="zoekBuddy" onclick="onclickZoek()">Zoek een buddy</button>
+            </li>
+        </ul>
+    </div>
+    <p id="demo"></p>
+    <ul class="vakantieList">
+        <li class="vakantieItem">
+            <a href="https://www.corendon.nl/indonesie/bali/kuta/bali-rani#9574.IDRAN.AMSDPS.290220.8.DE-F.."
+               class="vakantieLink">
+                <img src="assets/images/homeBali.jpg"/>
+                <div class="vakantieInfo">
+                    <p class="vakantiePrijs">v.a. &euro;599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </p>
+                    <p class="vakantieNaam">BALI</p>
+                    <p class="vakantieTxt">Logies en ontbijt</p>
+                </div>
+            </a>
+        </li>
+        <li class="vakantieItem">
+            <a href="https://www.corendon.nl/brazilie/natal/tibau-do-sul/marinas-resort?tab=photo-tab#acco-tabs-section&9197.BRMAR.AMSNAT.151219.7.DB-A.."
+               class="vakantieLink">
+                <img src="assets/images/homeBrazilie.jpg"/>
+                <div class="vakantieInfo">
+                    <p class="vakantiePrijs">v.a. &euro;579</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </p>
+                    <p class="vakantieNaam">BRAZILI&Euml;</p>
+                    <p>All Inclusive</p>
+                </div>
+            </a>
+        </li>
+        <li class="vakantieItem">
+            <a href="https://www.corendon.nl/verenigde-arabische-emiraten/dubai/dubai-stad/ghaya-grand-hotel?tab=photo-tab#acco-tabs-section&4675.DUGHA.AMSDXB.200120.3.DD-F.."
+               class="vakantieLink">
+                <img src="assets/images/homeDubai.jpg"/>
+                <div class="vakantieInfo">
+                    <p class="vakantiePrijs">v.a. &euro;416</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </p>
+                    <p class="vakantieNaam">DUBAI</p>
+                    <p>Logies en ontbijt</p>
+                </div>
+            </a>
+        </li>
+        <li class="vakantieItem">
+            <a href="https://www.corendon.nl/griekenland/kos/kos-stad/aegean-view-aqua-resort?tab=photo-tab#acco-tabs-section&819.KOAVA.MSTKGS.160420.7.DZ-A.."
+               class="vakantieLink">
+                <img src="assets/images/homeGriekenland.jpg"/>
+                <div class="vakantieInfo">
+                    <p class="vakantiePrijs">v.a. &euro;399</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </p>
+                    <p class="vakantieNaam">GRIEKENLAND</p>
+                    <p>All Inclusive</p>
+                </div>
+            </a>
+        </li>
+        <li class="vakantieItem">
+            <a href="https://www.corendon.nl/italie/sicilie/mazara-del-vallo/hopps-hotel?tab=photo-tab#acco-tabs-section&8383.PIHOP.AMSTPS.070420.7.DA-A.."
+               class="vakantieLink">
+                <img src="assets/images/homeItalie.jpg"/>
+                <div class="vakantieInfo">
+                    <p class="vakantiePrijs">v.a. &euro;339</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i></p>
+                    <p class="vakantieNaam">ITALI&Euml;</p>
+                    <p>All Inclusive</p>
+                </div>
+            </a>
+        </li>
+        <li class="vakantieItem">
+            <a href="https://www.corendon.nl/portugal/madeira/calheta/savoy-saccharum-resort-spa?tab=photo-tab#acco-tabs-section&7786.FNSSR.AMSFNC.171219.7.DZ1-F.."
+               class="vakantieLink">
+                <img src="assets/images/homePortugal.jpg"/>
+                <div class="vakantieInfo">
+                    <p class="vakantiePrijs">v.a. &euro;435</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </p>
+                    <p class="vakantieNaam">PORTUGAL</p>
+                    <p>Logies en ontbijt</p>
+                </div>
+            </a>
+        </li>
+        <li class="vakantieItem">
+            <a href="https://www.corendon.nl/spanje/costa-de-la-luz/islantilla/fly-go-occidental-isla-cristina?tab=photo-tab#acco-tabs-section&8908.CDOCF.AMSFAO.180420.7.DZ-A.."
+               class="vakantieLink">
+                <img src="assets/images/homeSpanje.jpg"/>
+                <div class="vakantieInfo">
+                    <p class="vakantiePrijs">v.a. &euro;701</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i></p>
+                    <p class="vakantieNaam">SPANJE</p>
+                    <p>All Inclusive</p>
+                </div>
+            </a>
+        </li>
+        <li class="vakantieItem">
+            <a href="https://www.corendon.nl/turkije/turkse-riviera/antalya/lara/grand-park-lara?tab=photo-tab#acco-tabs-section&3545.ANGPL.BRUAYT.141219.7.DZ-A.."
+               class="vakantieLink">
+                <img src="assets/images/homeTurkije.jpg"/>
+                <div class="vakantieInfo">
+                    <p class="vakantiePrijs">v.a. &euro;234</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </p>
+                    <p class="vakantieNaam">TURKIJE</p>
+                    <p>All Inclusive</p>
+
+                </div>
+            </a>
+        </li>
+    </ul>
+</main>
+</body>
+</html>

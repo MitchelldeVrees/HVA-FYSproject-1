@@ -1,0 +1,62 @@
+<script src="assets/js/header.js"></script>
+<nav>
+    <div class="blue-nav">
+        <div class="nav-logo"><a href="index.html"><img src="assets/images/travelBuddyLogo.svg"/></a></div>
+
+
+        <a class="linkNav" href="index.html">Home</a>
+        <a class="linkNav loggedIn" href="matches.html">Buddies</a>
+        <a class="linkNav loggedIn" href="message.html">Berichten</a>
+        <a class="linkNav loggedOut" href="register.html">Registreren</a>
+        <a class="linkNav" href=help.html><img class="helpImage" src="assets/images/questionmark.svg"/> Help</a>
+
+        <div class="profile-nav">
+            <ul>
+                <li class="profielfoto"><a href="profiel.html">
+                    <div class="imgcontainer"><div id="navProfileImage"></div>
+                    </div>
+                </a></li>
+                <li>
+                    <p class="account-nav">Mijn TravelBuddy</p>
+                    <button class="login-nav" onclick="document.getElementById('id01').style.display='block'"><span
+                            id="loginText"></span></button>
+                    <a href="profiel.html"><span id="naamNav"></span></a>
+                </li>
+                <li class="menuNav">
+                    <p class="menu-nav"><i class="fas fa-bars"></i></p>
+                    <div class="dropdown-content">
+                        <p class="loggedOut"><a href="register.html">Registreren</a></p>
+                        <p class="loggedIn"><a href="profiel.html">Profiel</a></p>
+                        <p class="logoutP loggedIn" onclick="onLogout()">
+                            <span id="loginLogout"></span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="login-popup" id="id01" style="z-index: 2;">
+        <div class="login-overlay">
+            <div class="container">
+                <div class="login-top">
+                    <h1 class="inloggen">Inloggen</h1>
+                    <p class="login-travelbuddy">Log in met uw Mijn TravelBuddy account</p>
+                    <label class="input-label">E-mailadres</label>
+                    <span class="formErrorLogin error" id="loginCheck">Email of wachtwoord is onjuist!</span>
+                    <input class="input-bar" id="loginEmail" name="email" required type="text"><br>
+                    <label class="input-label">Wachtwoord</label>
+                    <input class="input-bar" id="loginPassword" name="password" required type="password"><br>
+                </div>
+                <div class="login-bottom">
+                    <button class="login-button" type="submit" onclick="onLogin()">Inloggen</button>
+                    <br>
+                    <a class="link-password" href="wachtwoord.html">Wachtwoord vergeten?</a>
+                    <div class="login-account">
+                        <p>Heeft u nog geen account? <a class="link-start" href="register.html">Start hier</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

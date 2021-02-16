@@ -1,0 +1,167 @@
+select {
+    padding: 0;
+    margin: 0;
+}
+
+textarea {
+    max-width: 50vh;
+    min-width: 50vh;
+    max-height: 10vh;
+    min-height: 5vh;
+    padding: 0;
+    margin: 0;
+}
+
+em {
+    color: var(--black);
+    font-style: normal;
+    font-weight: bold;
+}
+
+.head-profile {
+    color: var(--default);
+}
+
+.imageBox {
+    width: 25.5%;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+.fileButton {
+padding-bottom: 10px;
+
+}
+
+.uploadButton {
+    padding-bottom: 10px;
+}
+
+.profile-item {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-top: 1vh;
+    width: 50vh;
+}
+
+.imagePreviewSmall {
+    width: 32px;
+    padding: 10px;
+
+}
+
+.imagePreviewMedium {
+    width: 64px;
+    padding: 10px;
+
+}
+
+.imagePreviewBig {
+    width: 128px;
+    padding: 10px;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    height: 150px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+
+}
+
+.input-barGender {
+    width: 100%;
+    height: 38px;
+    border: 2px solid lightgrey;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.input-barInfo {
+    align-self: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    height: 95px;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.input-barHobby {
+    width: 94%;
+    height: 30px;
+    border: 2px solid lightgrey;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.input-barCountry {
+    width: 100%;
+    height: 38px;
+    border: 2px solid lightgrey;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+
+
+.save-button {
+    color: var(--white);
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 70px;
+    font: inherit;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.save-button:hover {
+    background-color: var(--default);
+}
+
+.profileView-item {
+    height: 60px;
+    border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-top: 1vh;
+    width: 50vh;
+    border-radius: 10px;
+
+
+}
+
+.profileViewInfo-item {
+    height: 180px;
+    border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-top: 1vh;
+    width: 50vh;
+    border-radius: 10px;
+}
+
+.profileShowText {
+    margin-right: 40px;
+}
+
+

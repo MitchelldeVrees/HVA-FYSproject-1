@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+    <title>TravelBuddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/index.css"/>
+    <link rel="stylesheet" href="assets/style/login.css"/>
+    <link rel="stylesheet" href="assets/style/default.css"/>
+    <link rel="stylesheet" href="assets/style/register.css"/>
+    <script src="https://cdn.fys.cloud/fyscloud/0.0.2/fyscloud.bundle.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/register.js"></script>
+    <script src="assets/js/app.js"></script>
+</head>
+<body>
+<div class="register">
+        <div class="register-register">
+            <h1 class="register-head">Registreren</h1>
+            <div class="salutation">
+                <label class="label-input">Aanhef</label>
+                <select class="bar-input" class="salutation" id="gender" required>
+                    <option value="Male">Dhr.</option>
+                    <option value="Female">Mevr.</option>
+                </select>
+            </div>
+            <div class="voornaam">
+                <label class="label-input">Voornaam</label>
+                <span class="formErrorName error" id="invalid_name">De naam is onjuist!</span>
+                <input class="bar-input" id="firstname" type="text"  required><br>
+            </div>
+            <div class="achternaam">
+                <label class="label-input">Achternaam</label>
+                <span class="formErrorLastname error" id="invalid_lastname">De achternaam is onjuist!</span>
+                <input class="bar-input" id="lastname" type="text"  required><br>
+            </div>
+            <div class="leeftijd">
+                <label class="label-input">Leeftijd</label>
+                <span class="formErrorAge error" id="invalid_age">De leeftijd is onjuist!</span>
+                <input class="bar-input" id="age" type="number" min="18" max="99" required><br>
+            </div>
+            <div class="email">
+                <label class="label-input">E-mailadres</label>
+                <span class="formErrorEmail error" id="invalid_email">Deze email is niet juist!</span>
+                <input class="bar-input" id="email" type="text" required><br>
+            </div>
+            <div class="wachtwoord">
+                <label class="label-input">Wachtwoord</label>
+                <span class="formErrorPasswordControle error" id="passwordControle">De wachtwoord voldoet niet aan de woorwaarden</span>
+                <input class="bar-input" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  type="password" required>
+                <label class="label-input">Herhaal Wachtwoord</label>
+                <span class="formErrorPasswordMatch error" id="passwordMatch">De wachtwoorden komen niet overeen</span>
+                <input class="bar-input" id="passwordSecond" type="password" required>
+            </div>
+
+            <div>
+                <p>Door het aanmaken van uw account gaat u akkoord met onze <a href="https://www.corendon.nl/algemene-voorwaarden" class="link-terms">Algemene Voorwaarden</a>
+                </p>
+            </div>
+            <div class="register-bottom">
+                <input class="register-button" value="Registreren" id="submit" type="submit" onclick="onCheck()"/>
+                <a href="index.html" class="link-login">< Ga naar de homepagina</a>
+            </div>
+        </div>
+    <div class="register-account">
+        <h1 class="account-head">Voordelen van een account</h1>
+        <ul>
+            <li class="account-voordelen">Een buddy vinden op basis van interesses en vakantieland</li>
+            <li class="account-voordelen">Een buddy berichten</li>
+            <li class="account-voordelen">Een reis boeken via Corendon.nl</li>
+            <li class="account-voordelen">Op Corendon.nl direct uw gegevens ingevuld bij boeken</li>
+        </ul>
+        <div id="message">
+            <h3>Wachtwoord moet het volgende bevatten:</h3>
+            <p id="letter" class="invalid"><b>Kleine letter</b></p>
+            <p id="capital" class="invalid"><b>Hoofdletter</b></p>
+            <p id="number" class="invalid"><b>Nummer</b></p>
+            <p id="length" class="invalid">Minimaal <b>8 karakters</b></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    var myInput = document.getElementById("password");
+    var letter = document.getElementById("letter");
+    var capital = document.getElementById("capital");
+    var number = document.getElementById("number");
+    var length = document.getElementById("length");
+
+    // Wanneer de gebruiker op het wachtwoordveld klikt komt de controle bericht te voorschijn.
+    myInput.onfocus = function() {
+        document.getElementById("message").style.display = "block";
+    }
+
+    // Wanneer er buiten de wachtwoordveld word gedrukt verdwijnt de bericht.
+    myInput.onblur = function() {
+        document.getElementById("message").style.display = "none";
+    }
+
+    // Gebruiker typt
+    myInput.onkeyup = function() {
+            // Validatie kleine letter
+        var lowerCaseLetters = /[a-z]/g;
+        if(myInput.value.match(lowerCaseLetters)) {
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+        } else {
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+        }
+
+        // Validatie hoofdletter
+        var upperCaseLetters = /[A-Z]/g;
+        if(myInput.value.match(upperCaseLetters)) {
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+        } else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+        }
+
+        // Validatie nummer
+        var numbers = /[0-9]/g;
+        if(myInput.value.match(numbers)) {
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+        } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+        }
+
+        // Validatie lengte
+        if(myInput.value.length >= 8) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+        } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+        }
+    }
+</script>
+</body>
+</html>

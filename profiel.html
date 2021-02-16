@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <title>TravelBuddy - Profiel</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="assets/style/profiel.css" rel="stylesheet"/>
+    <link href="assets/style/chosen.css" rel="stylesheet"/>
+    <link href="assets/style/login.css" rel="stylesheet"/>
+    <link href="assets/style/default.css" rel="stylesheet"/>
+    <script src="https://cdn.fys.cloud/fyscloud/0.0.2/fyscloud.bundle.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/profiel.js"></script>
+    <script src="assets/js/app.js"></script>
+</head>
+<body>
+<center>
+
+
+<ul class="profielUL">
+    <h1 class="head-profile">Profiel van <span id="name"></span></h1>
+
+
+    <em>Profielfoto: </em>
+    <div class="imageBox">
+
+        <div class="profile-image">
+            <img id="imagePreviewSmall" src="assets/images/profile.svg" alt="Voorbeeld" class="imagePreviewSmall"  />
+            <img id="imagePreviewMedium" src="assets/images/profile.svg" alt="Voorbeeld" class="imagePreviewMedium" />
+            <img id="imagePreviewBig" src="assets/images/profile.svg" alt="Voorbeeld" class="imagePreviewBig" />
+        </div>
+
+        <div class="fileButton">
+            <input type="file" id="fileUpload"/>
+        </div>
+
+    </div>
+
+        <li class="profile-item">
+            <em>Voornaam: </em>
+            <input class="input-bar" name="Naam" id="firstNameProfile" required size="26" type="text">
+        </li>
+        <li class="profile-item">
+            <em>Achternaam: </em>
+            <input class="input-bar" name="Naam" id="lastNameProfile" required size="26" type="text">
+        </li>
+        <li class="profile-item">
+            <em>Leeftijd:</em>
+            <input class="input-bar" name="age" id="ageProfile" maxlength="2">
+        </li>
+        <li class="profile-item">
+            <em>Geslacht:</em>
+        <select class="input-barGender" name="genderProfile" id="genderProfile">
+                <option value="Man">Man</option>
+                <option value="Vrouw">Vrouw</option>
+        </select>
+        </li>
+        <li class="profile-item">
+            <em>Over mij:</em>
+            <textarea class="input-barInfo" id="informationProfile" maxlength="254" ></textarea>
+        </li>
+    <li class="profile-item">
+        <em>Interesse 1 </em>
+        <input class="input-barHobby" name="interest" id="interest1Profile" required size="26" type="text" maxlength="15">
+    </li>
+    <li class="profile-item">
+        <em>Interesse 2 </em>
+        <input class="input-barHobby" name="interest" id="interest2Profile" required size="26" type="text" maxlength="15">
+    </li>
+        <li class="profile-item">
+            <em>Vakantie Land: </em>
+            <select class="input-barCountry" name="countryProfile" id="favDestProfile">
+                <option value=""></option>
+                <option value="Bali">Bali</option>
+                <option value="Brazilïe">Brazili&euml;</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Griekenland">Griekenland</option>
+                <option value="Italy">Italy</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Spanje">Spanje</option>
+                <option value="Turkije">Turkije</option>
+            </select>
+        </li>
+
+        <li class="profile-item">
+            <button class="save-button submitButton" id="submit" onclick="onSubmit()">Opslaan</button>
+            <p><span id="processing" ></span></p>
+        </li>
+
+    </ul>
+
+
+</center>
+
+
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+#email {
+    width: 61%;
+}
+
+.bar-input {
+    width: 60%;
+    height: 30px;
+    border: 2px solid lightgrey;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: Roboto, sans-serif;
+}
+
+.label-input, .bar-input, .content {
+    font-size: 18px;
+}
+
+.content {
+    width: 60%;
+    height: 240px;
+    border: 2px solid lightgrey;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-left: 12px;
+    font-family: Roboto, sans-serif;
+}
+
+.foto {
+    text-align: center;
+}
+
+.image {
+    width: 8%;
+}
+
+.emailtitel {
+    text-align: center;
+    color: var(--default);
+}
+
+.email {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.textarea {
+    margin-top: 50px;
+}
+
+
+.onderwerp {
+    text-align: center;
+    width: 100%;
+}
+
+.send {
+    text-align: center;
+}
+
+.send-button {
+    color: var(--white);
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 70px;
+    font: inherit;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.send-button:hover {
+    background-color: var(--default);
+}
+
+.succesvol_verstuurd {
+    text-align: center;
+}
+
+.succesvol-verstuurd {
+    color: var(--white);
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 70px;
+    font: inherit;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.succesvol-verstuurd:hover {
+    background-color: var(--default);
+}
+
+.succesvol_popup {
+    background-color: var(--yellow);
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 6%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.login-overlay {
+    margin: auto;
+    width: 40%;
+    padding-top: 6%;
+}
